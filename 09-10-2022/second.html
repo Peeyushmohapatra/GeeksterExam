@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .maincontainer {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.865);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+    }
+    .second {
+        display: flex;
+        height: 250px;
+        width: 1090px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="maincontainer">
+            <div class="first">
+                <h3 style="color: white;">A Bit About Me</h3>
+                <br>
+                <h1 style="color: orange;">Who Am I?</h1>
+                <br>
+                
+                <img style="border-radius:50% ;height: 300px;width: 300px;border: 3px solid orange;" src="https://www.blendswap.com/blend_previews/2982/0/0" />
+                <br>
+                <br>
+                <p style="color: white;">Hi I'm Jack Smith. Click here to add your own text and edit me.Ut enim ad minim veniam, quis nostrud</p>
+                <p style="color: white;"> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                <p style="color: white;"> reprehenderit in voluptate velit esse cillum dolor eu fugiat nulla pariatur.</p>
+                <br>
+
+                <div style="height: 20px;width: 154px;display: flex;flex-direction: column;">
+                    <h4 style="color: white;">image by Freepik.</h4>
+                    <hr style="margin-left: 83px;">
+                </div>
+
+                
+            </div>
+            <div  class="second">
+
+
+                <div style="height: 250px;width: 230px; background-color: white;border-radius: 10px;box-shadow: 0 10px orange;padding: 20px;display: flex;flex-direction: column;gap: 20px;" class="child">
+                <img style="height:80px ;width: 80px;" src="https://cdn-icons-png.flaticon.com/512/2482/2482729.png"/>
+                
+                <h4>Graphic Design</h4>
+                
+                <div style="height: 10px;width: 55px;">
+                    <h3>more</h3>
+                    <hr>
+                </div>
+                </div>
+
+
+                <div style="height: 250px;width: 230px; background-color: white;border-radius: 10px;box-shadow: 0 10px orange;padding: 20px;display: flex;flex-direction: column;gap: 20px;" class="child">
+                    <img style="height:80px ;width: 80px;" src="data:image/png;base64,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"/>
+                    <h4>Web-Design</h4>
+                    <div style="height: 10px;width: 55px;">
+                        <h3>more</h3>
+                        <hr>
+                    </div>
+                </div>
+
+
+
+                <div style="height: 250px;width: 230px; background-color: white;border-radius: 10px;box-shadow: 0 10px orange;padding: 20px;display: flex;flex-direction: column;gap: 20px;" class="child">
+                <img style="height:80px ;width: 120px;" src="data:image/png;base64,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"/>
+                    <h4>Web-Design</h4>
+                    <div style="height: 10px;width: 55px;">
+                        <h3>more</h3>
+                        <hr>
+                    </div>
+                </div>
+
+
+                <div style="height: 250px;width: 230px; background-color: white;border-radius: 10px;box-shadow: 0 10px orange;padding: 20px;display: flex;flex-direction: column;gap: 20px;" class="child">
+                    <img style="height:80px ;width: 80px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR37ZgXu_7B9_Mtp24_6UMTW9NhiERfijbxoUxBVblUNoLiOzoJH2bHd5eJViECB9Wd85A&usqp=CAU"/>
+                    <h4>Application</h4>
+                    <div style="height: 10px;width: 55px;">
+                        <h3>more</h3>
+                        <hr>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
