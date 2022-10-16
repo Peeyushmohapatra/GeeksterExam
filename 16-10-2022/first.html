@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .maincontainer {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(255,230,202);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentcontainer {
+        height: 70%;
+        width: 70%;
+        background-color: white;
+        box-shadow: 0 0 10px grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .wrapper {
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="maincontainer">
+        <div class="contentcontainer">
+            <div class="wrapper">
+
+                <!-- First -->
+            <div style="display: flex;justify-content: space-between;margin-bottom: 25px;">
+                <div style="display: flex;">
+                    <h3>Japan</h3>
+                    <h2 style="color: red;font-size: large;">.</h2>
+                </div>
+
+                <div style="gap: 10px;display: flex;margin-right: 57px;">
+                    <button style="border: none;background-color: transparent;color: grey;">ABOUT</button>
+                    <button style="border: none;background-color: transparent;color: grey;">DISCOVER</button>
+                    <button style="border: none;background-color: transparent;color: grey;">PLAN YOUR TRIP</button>
+                </div>
+            </div>
+            <!-- First -->
+
+            <!-- Second -->
+            <div style="display: flex;height: 70%;width: 100%;display: flex;align-items: center;position: relative;margin-bottom: 30px;">
+                <div style="background-color: white;position: absolute;left: 10px;height: 40%;width: 15%;display: flex;align-items: center;justify-content: center;flex-direction: column;box-shadow: 0 0 2px rgba(128, 128, 128, 0.34);top: 170px;">
+                    <h1><u style="text-decoration-color:red">Explore</u></h1>
+                    <h1 style="margin-right: 35px; ;"><u style="text-decoration-color:red;">Tokyo</u></h1>
+                </div>
+                <div style="height: 100%;width: 90%;margin-left: 50px;">
+                    <img style="height:100%; width: 100%;" src="https://w0.peakpx.com/wallpaper/797/702/HD-wallpaper-senspji-asakusa-kannon-temple-summer-japanese-landmarks-kyoto-tokyo-japan.jpg" alt="">
+                </div>
+            </div>
+             <!-- Second -->
+
+             <!-- Third -->
+            <div style="height:calc(100vh - 30%) ;width: 100%;display: flex;position: relative;flex-direction: column;">
+
+                <div>
+                    <div style="height: 42%;width: 70%;margin-left: 48px;">
+                        <h4 style="color:grey">Tokyo, Japan's busy capital,mixes the ultramodern and the traditional,form neon-lit skyscrapers to historic temples.</h4>
+                    </div>
+                </div>
+                <div style="height: calc(100vh - 80%);margin-right: 70px">
+                    <div style="height: 50px;width: 100%;display: flex;justify-content: flex-end;">
+                        <div style="height: 50px;width:100px;border: 2px solid grey;display: flex;justify-content: center;align-items: center;">
+                            <i style="color:grey" class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div style="height: 50px;width:100px;border: 2px solid grey;display: flex;justify-content: center;align-items: center;">
+                            <i style="color:grey" class="fa-sharp fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <!-- Third -->
+
+
+        </div>
+        </div>
+    </div>
+</body>
+</html>
