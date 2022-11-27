@@ -5,15 +5,15 @@
 <table id="sampleTable" border="1">
 
 </table><br>
-<input type="button" onclick="addRow()" value="addRow">
+<input id="table" type="button" onclick="addRow()" value="addRow">
 </body>
 <script>
-    const table = document.getElementById('sampleTable');
-    function addRow(){
-        table.innerHTML = `<tr><td>Row1 cell1</td>
-                           <td>Row1 cell2</td></tr>
-                           <tr><td>Row2 cell1</td>
-                           <td>Row2 cell2</td></tr>`
-                     }
+        let count = 1;
+        function addRow() {
+         let childRow =  document.getElementById('sampleTable');
+         childRow.innerHTML +=`<tr><td>Row${count} Cell1</td><td>Row${count} Cell2</td></tr>`;
+            count++;
+        }
+
 </script>
 </html>
