@@ -83,12 +83,12 @@
 
         first.addEventListener("click",()=>{
             countinNum--;
-            
+            count.innerText = countinNum
             if(countinNum === 0){
             count.innerText = countinNum
             count.style.color = "black";
             }
-            count.innerText = countinNum
+            
             if(countinNum<0){
                 count.style.color = "red";
             }
@@ -102,11 +102,12 @@
 
         third.addEventListener("click",()=>{
             countinNum++;
+            count.innerText = countinNum
             if(countinNum === 0){
             count.innerText = countinNum
             count.style.color = "black";
             }
-            count.innerText = countinNum
+     
             if(countinNum>0){
                 count.style.color = "green";
             }
