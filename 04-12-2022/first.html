@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color scheme switcher</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle {
+        height: 30%;
+        display: flex;
+        gap: 10px;
+        width: 30%;
+        align-items: center;
+    }
+
+    #first {
+        height: 50%;
+        width: 25%;
+        border: 3px solid darkred;
+        border-radius: 50%;
+        background-color: gray;
+        cursor: pointer;
+    }
+
+    #second {
+        height: 50%;
+        width: 25%;
+        border: 3px solid darkred;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    #third {
+        height: 50%;
+        width: 25%;
+        border: 3px solid darkred;
+        border-radius: 50%;
+        background-color: blue;
+        cursor: pointer;
+    }
+
+    #fourth {
+        height: 50%;
+        width: 25%;
+        border: 3px solid darkred;
+        border-radius: 50%;
+        background-color: yellow;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="main">
+        <h1>Color Scheme Switcher</h1>
+        <div class="circle">
+            <div id="first"></div>
+            <div id="second"></div>
+            <div id="third"></div>
+            <div id="fourth"></div>
+        </div>
+        <h3>Try clicking on one of the color above</h3>
+        <h3>to change thebackground color of this page!</h3>
+    </div>
+    <script>
+        const main = document.getElementById("main");
+        const first = document.getElementById('first');
+        const sec = document.getElementById("second");
+        const third = document.getElementById("third");
+        const forth = document.getElementById("fourth");
+    
+        first.addEventListener("click",()=>{
+            main.style.backgroundColor = "gray"
+        })
+
+        sec.addEventListener("click",()=>{
+            main.style.backgroundColor = "rgb(255,255,255)"
+        })        
+
+        third.addEventListener("click",()=>{
+            main.style.backgroundColor = "blue"
+        })
+
+        forth.addEventListener("click",()=>{
+            main.style.backgroundColor = "yellow"
+        })
+
+    </script>
+    
+</body>
+</html>

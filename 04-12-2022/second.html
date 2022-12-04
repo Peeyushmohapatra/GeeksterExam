@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    .h1 {
+        font-size: 100px;
+        color: rgb(16,43,66);
+    }
+
+    #counter {
+        font-size: 150px;
+    }
+
+    .button {
+        height: 10%;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #one {
+        height: 70%;
+        width: 30%;
+        font-size:large;
+        border-radius: 8px;
+        border: 3px solid black;
+    }
+
+    #two {
+        height: 70%;
+        width: 30%;
+        font-size:large;
+        border-radius: 8px;
+        border: 3px solid black;
+    }
+
+    #three {
+        height: 70%;
+        width: 30%;
+        font-size:large;
+        border-radius: 8px;
+        border: 3px solid black;
+    }
+</style>
+<body>
+    <div class="main">
+        <h1 class="h1">Counter</h1>
+        <h1 id="counter">0</h1>
+        <div class="button">
+            <button id="one">DECREASE</button>
+            <button id="two">RESET</button>
+            <button id="three">INCREASE</button>
+        </div>
+    </div>
+
+    <script>
+        const count = document.getElementById("counter");
+        const first = document.getElementById("one");
+        const second = document.getElementById("two");
+        const third = document.getElementById("three");
+
+        let i = 0;
+        let countinNum = Number(count.innerText);
+
+        first.addEventListener("click",()=>{
+            countinNum--;
+            if(countinNum === 0){
+            count.innerText = countinNum
+            count.style.color = "black";
+            }
+            if(countinNum<0){
+                count.innerText = countinNum
+                count.style.color = "red";
+            }
+        })
+
+        second.addEventListener("click",()=>{
+            countinNum = 0
+            count.innerText = countinNum
+            count.style.color = "black";
+        })
+
+        third.addEventListener("click",()=>{
+            countinNum++;
+            if(countinNum === 0){
+            count.innerText = countinNum
+            count.style.color = "black";
+            }
+            if(countinNum>0){
+                count.innerText = countinNum
+                count.style.color = "green";
+            }
+
+            
+        })
+
+
+       
+    </script>
+</body>
+</html>
