@@ -24,3 +24,7 @@ body {
 .button {
     justify-content: end;
 }
+
+.table , .td , .tr {
+    border: 1px solid black;
+}

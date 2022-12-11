@@ -1,8 +1,10 @@
-const one    = document.getElementsByClassName("one")[0];
+    const one    = document.getElementsByClassName("one")[0];
     const two    = document.getElementsByClassName("two")[0];
     const three  = document.getElementsByClassName("three")[0];
     const four   = document.getElementsByClassName("four")[0];
     const button = document.getElementsByClassName("button")[0];
+    const table  = document.getElementsByClassName("table")[0];
+
 
     button.addEventListener("click",() => {
         
@@ -15,6 +17,16 @@ const one    = document.getElementsByClassName("one")[0];
         let valThree = three.value;
         let valFour = four.value;
         validPassword(valThree,valFour)
+
+        const child = document.createElement("tr");
+        child.setAttribute("class","tr");
+        child.innerHTML = `<tr class="tr">
+                           <td class="td">${valOne}</td>
+                           <td class="td">${valTwo}</td>
+                           <td class="td">${valThree}</td>
+                           </tr>`
+        table.append(child);
+        
     })
 
 
@@ -26,7 +38,7 @@ const one    = document.getElementsByClassName("one")[0];
         }
         for(let i=0; i<valOne.length; i++){
             let ch = valOne.charAt(i);
-            if((ch>="a" && ch<="z") || (ch>="A" && ch<="Z")){
+            if((ch>="a" && ch<="z") || (ch>="A" && ch<="Z" || ch === " ")){
                 continue
             }else{
                 alert(ch+" Not allowed in Name");
