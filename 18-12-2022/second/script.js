@@ -1,4 +1,6 @@
-const country = document.getElementById("country");
+    
+    
+    const country = document.getElementById("country");
     const state   = document.getElementById("state");
     const button  = document.getElementById("search");
     const parent  = document.getElementById("card_container");
@@ -10,7 +12,7 @@ const country = document.getElementById("country");
     function clearEle(){
         parent.innerText = ""
     }
-    // getData()
+
 
     async function getData(){
         const valueCon = country.value;
