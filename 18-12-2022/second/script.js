@@ -17,7 +17,7 @@
     async function getData(){
         const valueCon = country.value;
         const valueSta = state.value;
-        const api = await fetch (`http://universities.hipolabs.com/search?country=${valueCon}`);
+        const api = await fetch (`http://universities.hipolabs.com/search?country=india`);
         const textResponse = await api.text();
         const jsonResponse = JSON.parse(textResponse);
         // console.log(jsonResponse);
