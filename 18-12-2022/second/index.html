@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #country {
+        padding: 0 10px;
+        width: 270px;
+        height: 40px;
+    }
+
+    #state {
+        padding: 0 10px;
+        width: 270px;
+        height: 40px;
+    }
+
+    #search {
+        height: 40px;
+        width: 90px;
+        background-color: rgb(66,153,235);
+        color: white;
+        border: none;
+    }
+
+    #card_container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>University List</h1>
+    <input id="country" type="text" placeholder="Country">
+    <input id = "state"type="text" value="Tamil Nadu" placeholder="state">
+    <button id="search">Search</button>
+    <div id="card_container">
+        
+    </div>
+</body>
+<script>
+    const country = document.getElementById("country");
+    const state   = document.getElementById("state");
+    const button  = document.getElementById("search");
+    const parent  = document.getElementById("card_container");
+
+    button.addEventListener("click",getData);
+    // getData()
+
+    async function getData(){
+        const valueCon = country.value;
+        const valueSta = state.value;
+        const api = await fetch (`http://universities.hipolabs.com/search?country=india`);
+        const textResponse = await api.text();
+        const jsonResponse = JSON.parse(textResponse);
+        // console.log(jsonResponse["0"]["state-province"]);
+        // console.log(valueSta)
+
+        for(let i=0; i<jsonResponse.length; i++){
+            if(jsonResponse[i]["state-province"] === valueSta){
+                // console.log(jsonResponse[i]["state-province"])
+                parent.innerHtml = `<div id="card">
+                                    <h3>${jsonResponse[i]["state-province"]}</h3>
+                                    <h3></h3>
+                                    <h3></h3>
+                                    </div>`
+            }
+        }
+        
+        
+    }
+
+    
+</script>
+</html>
