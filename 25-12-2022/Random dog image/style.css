@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto,'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(7, 7, 65);
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#button {
+    height: 50px;
+    width: 210px;
+    border-radius: 25px;
+    background-color: rgb(105,198,246);
+    color: white;
+    cursor: pointer;
+}
+
+#img {
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+}
