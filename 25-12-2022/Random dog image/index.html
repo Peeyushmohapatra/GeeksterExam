@@ -10,7 +10,7 @@
 <body>
     <h1 style="color: wheat;">Choose A New Family Member By Clicking "Get Dog" Or By Clicking "Enter"</h1>
     <button id="button">Get Pet</button>
-    <img id="img" src="" alt="">
+    <img style="display: none;" id="img" src="">
 </body>
     <script>
         const img = document.getElementById("img");
@@ -19,6 +19,7 @@
         button.addEventListener("click", getPet);
 
         async function getPet(){
+            img.style.display = "block"
             const data = await fetch("https://dog.ceo/api/breeds/image/random");
             const textData = await data.text();
             const jsonData = JSON.parse(textData)
