@@ -16,20 +16,37 @@
         const img = document.getElementById("img");
         const button = document.getElementById("button");
 
+        let count = 0;
+        let data;
+
         button.addEventListener("click", getPet);
+        
 
         async function getPet(){
+
+            count++;
+            if(count > 9){
+                button.removeEventListener("click")
+            }
             img.style.display = "block"
-            const data = await fetch("https://dog.ceo/api/breeds/image/random");
+            data = await fetch("https://dog.ceo/api/breeds/image/random");
             const textData = await data.text();
             const jsonData = JSON.parse(textData)
             img.setAttribute("src",jsonData.message)
         }
 
         addEventListener("keyup",((event) => {
+            count++;
+            if(count > 9){
+                button.removeEventListener("click")
+                
+            }
             if(event.key === "Enter"){
+                
                 getPet()
             }
+
+            
         }))
 
         
